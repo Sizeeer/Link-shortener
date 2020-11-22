@@ -1,0 +1,6 @@
+{
+  "port": 5000,
+  "mongoUri": "mongodb+srv://sizzzer:1234qwer@cluster0.phapa.mongodb.net/app",
+  "jwtSecret": "maxmaxmax",
+  "baseUrl": "http://localhost:5000"
+}

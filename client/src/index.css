@@ -1,0 +1,26 @@
+@import "~materialize-css/dist/css/materialize.min.css";
+
+input[type="text"]:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #ffeb3b;
+  box-shadow: 0 1px 0 0 #ffeb3b;
+}
+
+input[type="text"]:not(.browser-default):focus:not([readonly]) + label {
+  color: #ffeb3b !important;
+}
+input[type="text"]:not(.browser-default) {
+  color: #ffffff;
+}
+
+input[type="password"]:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #ffeb3b;
+  box-shadow: 0 1px 0 0 #ffeb3b;
+}
+
+input[type="password"]:not(.browser-default):focus:not([readonly]) + label {
+  color: #ffeb3b !important;
+}
+
+.input-field > label {
+  color: #ffffff !important;
+}
