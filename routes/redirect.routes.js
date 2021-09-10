@@ -7,7 +7,9 @@ router.get("/:code", async (req, res) => {
     const link = await Link.findOne({ code: req.params.code });
     if (link) {
       link.clicks++;
-      link.save();
+
+      await link.save();
+
       return res.redirect(link.from);
     }
     res.json("Ссылка не найдена").status(404);

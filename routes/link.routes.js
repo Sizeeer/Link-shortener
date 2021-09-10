@@ -8,7 +8,6 @@ const router = Router();
 router.get("/", auth, async (req, res) => {
   try {
     const links = await Link.find({ owner: req.user.userId });
-    console.log(links);
     res.json(links);
   } catch (e) {
     res.status(500).json({ message: "Что-то пошло не так, попробуйте снова" });
@@ -36,7 +35,6 @@ router.post("/generate", auth, async (req, res) => {
       code,
       owner: req.user.userId,
     });
-    console.log(link);
     await link.save();
 
     res.json({ link }).status(201);

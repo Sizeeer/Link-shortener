@@ -1,6 +1,6 @@
 {
   "port": 5000,
-  "mongoUri": "mongodb+srv://sizzzer:1234qwer@cluster0.phapa.mongodb.net/app",
+  "mongoUri": "mongodb+srv://sizzzer:1234qwer@cluster.stor7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
   "jwtSecret": "maxmaxmax",
   "baseUrl": "http://localhost:5000"
 }

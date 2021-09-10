@@ -1,13 +1,17 @@
 {
+  "homepage": "https://Sizeeer.github.io/LinksShortening",
   "name": "mern_stack",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
+    "build": "react-scripts build",
     "start": "node app.js",
     "server": "nodemon app.js",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "Max Krisanov <igrekzero@gmail.com>",
   "license": "ISC",
@@ -16,6 +20,7 @@
     "config": "^3.3.2",
     "express": "^4.17.1",
     "express-validator": "^6.6.1",
+    "gh-pages": "^3.2.3",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.14",
     "shortid": "^2.2.16"

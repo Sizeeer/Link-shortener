@@ -38,6 +38,7 @@ export const CreatePage = () => {
             id="link"
             type="text"
             value={link}
+            style={{ color: "#000" }}
             onChange={(e) => setLink(e.target.value)}
             onKeyPress={pressHandler}
           />

@@ -19,11 +19,10 @@ async function start() {
       useCreateIndex: true,
     });
     app.listen(PORT, () => {
-      console.log("Server is started");
+      console.log("start");
     });
   } catch (e) {
-    console.log(e);
-    process.exit(1);
+    console.log(e.messages);
   }
 }
 
