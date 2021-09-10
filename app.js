@@ -11,6 +11,15 @@ app.use("/t", require("./routes/redirect.routes"));
 
 const PORT = config.get("port") || 5000;
 
+if (process.env.NODE_ENV === "production") {
+  // Serve any static files
+  app.use(express.static(path.join(__dirname, "client/build")));
+  // Handle React routing, return all requests to React app
+  app.get("*", function (req, res) {
+    res.sendFile(path.join(__dirname, "client/build", "index.html"));
+  });
+}
+
 async function start() {
   try {
     await mongoose.connect(config.get("mongoUri"), {
