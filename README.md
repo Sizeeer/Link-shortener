@@ -1,1 +1,1 @@
-# Links shortening app(MERN)
+# Link shortener app(MERN)
